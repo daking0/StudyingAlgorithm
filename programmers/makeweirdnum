@@ -1,0 +1,18 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/12930#
+
+def solution(s):
+    answer = ''
+    resultlist = []
+    temp = s.split(" ") #맨뒤에 공백이 있을 수 있으므로 공백도 제대로 쪼개기!
+    for i in temp:
+        temtext = ''
+        for t in range(len(i)):
+            if(t%2==0):
+                temtext += i[t].upper()
+            else:
+                temtext += i[t].lower()   
+        resultlist.append(temtext)
+
+    answer = ' '.join(resultlist)
+    return answer
+    
